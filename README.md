@@ -9,5 +9,5 @@ El siguiente trabajo tiene como finalidad la explicación de sobre el avance de 
 
 ## Demo
 Se adjunto un video demo 
-
+https://github.com/ggmanuel1998/CuboRubik/blob/main/Video%20Prueba.webm
 
