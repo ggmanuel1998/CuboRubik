@@ -1,12 +1,5 @@
 //alumno:Victor Manuel Toledo Gamarra
-//instruciones  apretar la tecla
-// W para escalar el triangulo mas grande
-// S para escalar el triangulo mas pequeño
-// E para cambiar el color de la estrella
-// R para cambiar el color del rombo
-// C para cambiar el color del cuadrado
-// T para cambiar el color del triangulo
-// El cuadrado cambia de color constantemente
+//Link de gitHub: https://github.com/ggmanuel1998/CuboRubik
 
 
 #include <glad/glad.h>

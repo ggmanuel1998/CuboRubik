@@ -255,7 +255,6 @@ struct Rubik{
         if (reg_grados == 0) {
             for (int i = 0; i < 9; ++i) {
                 F[i]->trasladar(0, 0, -1);
-               // U[i]->cambiarcolor_cara(1, 0.512, 0.512, 0.512);
             }
         }
         if (reg_grados != cant_fps * veces) {
@@ -282,12 +281,11 @@ struct Rubik{
         if (reg_grados == 0) {
             for (int i = 0; i < 9; ++i) {
                 R[i]->trasladar(1, 0, 0);
-             //   F[i]->cambiarcolor_cara(2, 0.512, 0.512, 0.512);
             }
         }
         if (reg_grados != cant_fps * veces) {
             for (int i = 0; i < 9; ++i) {
-                R[i]->cambiarcolor_cara(2, 0.512, 0.512, 0.512);
+                R[i]->cambiarcolor_cara(2, 0, 1, 1);
                 R[i]->rot_x(animation_vel);
             }
             reg_grados++;
@@ -311,6 +309,7 @@ struct Rubik{
         }
         if (reg_grados != cant_fps * veces) {
             for (int i = 0; i < 9; ++i) {
+                U[i]->cambiarcolor_cara(4, 0, 1, 1);
                 U[i]->rot_y(animation_vel);
             }
             reg_grados++;
@@ -318,8 +317,11 @@ struct Rubik{
         }
 
         reg_grados = 0;
-        for (int i = 0; i < 9; ++i)
+        for (int i = 0; i < 9; ++i) {
+            U[i]->cambiarcolor_cara(4, 1, 0, 0);
             U[i]->trasladar(0, -1, 0);
+        }
+            
         actualizar_caras_pos();
         return "N";
     }
@@ -332,6 +334,7 @@ struct Rubik{
         }
         if (reg_grados != cant_fps * veces) {
             for (int i = 0; i < 9; ++i) {
+                B[i]->cambiarcolor_cara(0, 0, 1, 1);
                 B[i]->rot_z(animation_vel);
             }
             reg_grados++;
@@ -339,7 +342,10 @@ struct Rubik{
         }
         reg_grados = 0;
         for (int i = 0; i < 9; ++i)
+        {
+            B[i]->cambiarcolor_cara(0, 0, 1, 0);
             B[i]->trasladar(0, 0, -1);
+        }
         actualizar_caras_pos();
         return "N";
     }
@@ -352,6 +358,7 @@ struct Rubik{
         }
         if (reg_grados != cant_fps * veces) {
             for (int i = 0; i < 9; ++i) {
+                L[i]->cambiarcolor_cara(3, 0, 1, 1);
                 L[i]->rot_x(-animation_vel);
             }
             reg_grados++;
@@ -359,7 +366,11 @@ struct Rubik{
         }
         reg_grados = 0;
         for (int i = 0; i < 9; ++i)
+        {
+            L[i]->cambiarcolor_cara(3, 1, 0.5, 0);
             L[i]->trasladar(1, 0, 0);
+        }
+
         actualizar_caras_pos();
         return "N";
     }
@@ -372,6 +383,7 @@ struct Rubik{
         }
         if (reg_grados != cant_fps * veces) {
             for (int i = 0; i < 9; ++i) {
+                D[i]->cambiarcolor_cara(5, 0, 1, 1);
                 D[i]->rot_y(-animation_vel);
             }
             reg_grados++;
@@ -379,7 +391,11 @@ struct Rubik{
         }
         reg_grados = 0;
         for (int i = 0; i < 9; ++i)
+        {
+            D[i]->cambiarcolor_cara(5, 1, 1, 1);
             D[i]->trasladar(0, 1, 0);
+        }
+
         actualizar_caras_pos();
         return "N";
     }
@@ -401,7 +417,6 @@ struct Rubik{
                 escalar();
             }*/
         }
-        cout << "robotin" << endl;
         actual_animation = sol[contador_solucion];
 
         if (actual_animation == "R") {
