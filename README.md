@@ -1,2 +1,2 @@
 El siguiente trabajo tiene como finalidad la explicación de sobre el avance de la implementación del proyecto del Cubo Rubik por lo que este informe presentará puntos detallados de la lógica implementada en el código , por lo que desde un inicio el proyecto se modularizó en de 3 partes muy importantes que son modelado , animación y rendering ; sobretodo separando la estructura y la interfaz.
-![imagen_cubo](https://user-images.githubusercontent.com/51257596/145111087-70c32cf0-d4f7-4d12-b53a-495e966654f1.png)
+![imagen_cubo](https://user-images.githubusercontent.com/51257596/145111254-979951b7-688f-480c-b177-04ba134ea1da.png)
